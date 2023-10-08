@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @*try korbo ekhane ekta image add korar ..*@ 
+            @Html.ActionLink("Mohammad Sheakh Portfolio", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="px-5 collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <!-- <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>  -->
+                    <!-- Person Controller -->
+                    <li><a style="text-decoration: none; color: white; margin-left: 3px;" href="/Portfolio/Index">Home</a></li>
+                    <li style="text-decoration: none; color: white; margin-left: 3px;">||</li>
+                    <li><a style="text-decoration: none; color: white; margin-left:5px;" href="/Portfolio/Education">Education</a></li>
+                    <li style="text-decoration: none; color: white; margin-left: 3px;">||</li>
+                    <li><a style="text-decoration: none; color: white; margin-left:5px;" href="/Portfolio/Projects">Projects</a></li>
+                    <li style="text-decoration: none; color: white; margin-left: 3px;">||</li>
+                    <li><a style="text-decoration: none; color: white; margin-left:5px;" href="/Portfolio/PersonalInfo">Personal Info</a></li>
+                    <li style="text-decoration: none; color: white; margin-left: 3px;">||</li>
+                    <li><a style="text-decoration: none; color: white; margin-left:5px;" href="/Portfolio/Reference">Reference</a></li>
+                    <li style="text-decoration: none; color: white; margin-left: 3px;">||</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content" ">
+        @RenderBody()
+        <hr  style="margin-top: 200px;"/>
+        <footer >
+            <div style="margin-top: 10px;">
+                <p>&copy; @DateTime.Now.Year - mohammad.sheakh@gmail.com </p>
+            </div>
+            
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

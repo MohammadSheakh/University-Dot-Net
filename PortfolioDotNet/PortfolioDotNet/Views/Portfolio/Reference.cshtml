@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Reference";
+}
+
+<h2>Reference</h2>
+
+<div style="border:1px solid black; ">
+    <div style="display:flex; border-bottom: 1px solid black;">
+        <div>
+            <img src="https://cs.aiub.edu/storage/profile_pic/1955_1641877471.jpg" alt="Alternate Text" style="width: 60px; " />
+
+        </div>
+        <div style=" padding-left:20px;">
+            <!--<h5>TANVIR AHMED </h5>
+    <h6>Lecturer , Computer Science</h6>
+    <h6>tanvir.ahmed@aiub.edu</h6>
+        -->
+            @foreach (var item in ViewBag.tanvirSirDetails)
+            {
+                <h6>@item</h6>
+
+
+            }
+
+        </div>
+
+    </div>
+    <div style="display:flex;">
+        <div>
+            <img src="https://cs.aiub.edu/storage/profile_pic/Download_1579684397.jpg" alt="Alternate Text" style="width: 60px; " />
+
+        </div>
+        <div style=" padding-left:20px;">
+            @foreach (var item in ViewBag.kawsurSirDetails)
+            {
+                <h6>@item</h6>
+
+
+            }
+
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "SignUpAgain";
+}
+
+@model ValidationLabTask.Models.SignUpAgain
+
+<h2>SignUpAgain</h2>
+<form action="" method="post">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td> : </td>
+            <td>
+                <input type="text" name="Name" id="Name" value="@(Model==null ? "":Model.Name)" placeholder="Name" />
+            </td>
+            <td> <h6 class="text-danger">@Html.ValidationMessage("Name")</h6> </td>
+        </tr>
+
+        <tr>
+            <td>User Id</td>
+            <td> : </td>
+            <td>
+                <input type="text" name="UserId" id="UserId" value="@(Model==null ? "":Model.UserId)" placeholder="User Id" />
+            </td>
+            <td> <h6 class="text-danger">@Html.ValidationMessage("UserId")</h6> </td>
+        </tr>
+
+        <tr>
+            <td>Id</td>
+            <td> : </td>
+            <td>
+                <input type="text" name="Id" id="Id" value="@(Model==null ? "":Model.Id)" placeholder="Id" />
+            </td>
+            <td> <h6 class="text-danger">@Html.ValidationMessage("Id")</h6> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><h6 class="text-danger">@TempData["idAndEmailIsNotSame"]</h6></td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td> : </td>
+            <td>
+                <input type="text" name="Email" id="Email" value="@(Model==null ? "":Model.Email)" placeholder="Email" />
+            </td>
+            <td> <h6 class="text-danger">@Html.ValidationMessage("Email")</h6> </td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td> : </td>
+            <td>
+                <input type="text" name="Password" id="Password" value="@(Model==null ? "":Model.Password)" placeholder="Password" />
+            </td>
+            <td> <h6 class="text-danger">@Html.ValidationMessage("Password")</h6> </td>
+
+        </tr>
+
+
+        <tr>
+            <td>Date Of Birth</td>
+            <td> : </td>
+            <td>
+                <input type="date" name="Dob" id="Dob" value="@(Model==null ? "":Model.Dob.ToString("yyyy-MM-dd"))" placeholder="Dob" />
+
+
+            </td>
+            <td> <h6 class="text-danger">@Html.ValidationMessage("Dob")</h6> </td>
+
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit" class="btn btn-danger" />
+            </td>
+        </tr>
+    </table>
+</form>
+
