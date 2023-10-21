@@ -1,0 +1,2 @@
+D:\Web Dev\University-Dot-Net\ValidationLabTask\ValidationLabTask\obj\Debug\ValidationLabTask.csproj.AssemblyReference.cache
+D:\Web Dev\University-Dot-Net\ValidationLabTask\ValidationLabTask\obj\Debug\ValidationLabTask.csproj.CoreCompileInputs.cache
